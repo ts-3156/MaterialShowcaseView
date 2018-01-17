@@ -886,4 +886,8 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
     private void setRenderOverNavigationBar(boolean mRenderOverNav) {
         this.mRenderOverNav = mRenderOverNav;
     }
+
+    public void setShouldAnimate(boolean shouldAnimate) {
+        this.mShouldAnimate = shouldAnimate;
+    }
 }
