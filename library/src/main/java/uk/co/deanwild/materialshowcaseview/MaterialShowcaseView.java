@@ -690,6 +690,11 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
             return this;
         }
 
+        public Builder setShouldAnimate(boolean shouldAnimate) {
+            showcaseView.setShouldAnimate(shouldAnimate);
+            return this;
+        }
+
         public MaterialShowcaseView build() {
             if (showcaseView.mShape == null) {
                 switch (shapeType) {
@@ -885,5 +890,9 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
 
     private void setRenderOverNavigationBar(boolean mRenderOverNav) {
         this.mRenderOverNav = mRenderOverNav;
+    }
+
+    public void setShouldAnimate(boolean shouldAnimate) {
+        this.mShouldAnimate = shouldAnimate;
     }
 }
