@@ -413,6 +413,18 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
         }
     }
 
+    private void setDismissTextBackgroundColor(int backgroundColour) {
+        if (mDismissButton != null) {
+            mDismissButton.setBackgroundColor(backgroundColour);
+        }
+    }
+
+    private void setDismissTextPadding(int left, int top, int right, int bottom) {
+        if (mDismissButton != null) {
+            mDismissButton.setPadding(left, top, right, bottom);
+        }
+    }
+
     private void setShapePadding(int padding) {
         mShapePadding = padding;
     }
@@ -648,6 +660,16 @@ public class MaterialShowcaseView extends FrameLayout implements View.OnTouchLis
 
         public Builder setDismissTextColor(int textColour) {
             showcaseView.setDismissTextColor(textColour);
+            return this;
+        }
+
+        public Builder setDismissTextBackgroundColor(int backgroundColor) {
+            showcaseView.setDismissTextBackgroundColor(backgroundColor);
+            return this;
+        }
+
+        public Builder setDismissTextPaddding(int left, int top, int right, int bottom) {
+            showcaseView.setDismissTextPadding(left, top, right, bottom);
             return this;
         }
 
